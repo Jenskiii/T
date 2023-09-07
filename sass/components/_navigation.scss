@@ -5,7 +5,8 @@
   list-style: none;
   font-family: $navigation-font-family;
   font-weight: $navigation-font-weight;
-
+  justify-content: $site-header-jusitifcation-large-screens;
+ 
   a {
     color: $navigation-color;
     text-decoration: $navigation-link-text-decoration;
@@ -14,4 +15,7 @@
       color: $navigation-color-hover;
     }
   }
+  
 }
+
+

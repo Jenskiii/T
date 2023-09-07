@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.price-plan {
+    justify-self: center;
+    margin-top: $price-plan-margin-top;
+    background-color: $price-plan-background-color;
+    border-radius: $price-plan-border-radius;
+    max-width: $price-plan-max-width;
+    max-height: $price-plan-height;
+    @include mq(medium){
+        height: $price-plan-height;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__wrapper{
+        align-self: start;
+        height: 100%;
+    }
+
+    &__price{
+        margin-block: $price-plan-price-margin-block;
+    }
+
+    &__service{
+        --flow-spacer: #{$price-plan-service-flow-space};
+        display: flex;
+        align-items: $price-plan-service-align;
+        gap: $price-plan-service-gap;
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+        align-self: $price-plan-button-align;
+        margin-block: $price-plan-button-margin-block;
+    }
+
+    
+
+}

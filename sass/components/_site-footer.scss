@@ -3,6 +3,17 @@
 .site-footer {
   background-color: $footer-background-color;
   color: $footer-text-color;
+  
+  nav{
+    :after{
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $footer-border-bottom-color;
+      margin-block: $footer-border-bottom-margin-block;
+    }
+  }
+
 
   a {
     color: $footer-link-color;

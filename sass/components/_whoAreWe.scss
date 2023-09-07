@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.whoAreWe {
+  .even-columns {
+    // adjust column size on bigger screen
+    --grid-gap:2.5rem;
+    @include mq(medium) {
+      grid-template-columns: 30% 60%;
+      max-width: 95ch;
+      --grid-gap:5.5rem;
+    }
+  }
+
+  &__information {
+    text-align: left;
+    --flow-spacer:2rem;
+  }
+  &__img {
+    justify-self: center;
+    // swaps order at big screens
+    @include mq(medium) {
+      order: -1;
+      justify-self: left;
+    }
+  }
+
+  img {
+    max-width: $benefits-image-max-width;
+    object-fit: cover;
+    width: 100%;
+  }
+}

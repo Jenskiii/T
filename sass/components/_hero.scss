@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+//  home page
+.hero {
+    &__image {
+      height: 100%;
+      object-fit: cover;
+    }
+
+   
+      @include mq(medium, max){
+        .button{
+          margin-bottom: 1.2rem
+        }
+     }
+  }
+
+  // about us page
+
+  .about-us{
+    .hero{
+      &__img{
+        position: relative;
+        margin-top: $hero-image-padding-top;
+        
+        img{
+          max-height: 32rem;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .button{
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+      }
+    }
+  }

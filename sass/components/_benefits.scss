@@ -1,0 +1,49 @@
+@use "../abstracts/" as *;
+
+.benefits {
+    color: $benefits-paragraph-color;
+  &__accordion {
+    p {
+      font-family: $benefits-subheader-font-family;
+      font-weight: $benefits-subheader-font-weight;
+      font-size: $benefits-subheader-font-size;
+    }
+
+    .row {
+      cursor: pointer;
+      justify-content: $benefits-row-jusitifcation;
+      width: 100%;
+      &[data-type="active"] {
+        p {
+          font-weight: $benefits-subheader-active-font-weight;
+        }
+
+        svg {
+          fill: $benefits-icon-svg-fill-active;
+        }
+
+        path {
+          fill: $benefits-icon-path-arrow-active;
+        }
+
+        circle {
+          stroke: $benefits-icon-circle-stroke-active;
+        }
+      }
+    }
+  }
+
+  &__accordion > *:where(:not(:last-child)){
+    padding-bottom: $benefits-row-border-padding-bottom;
+    border-bottom: $benefits-row-border-bottom;
+  }
+
+
+  .even-columns{
+    --grid-gap: #{$benefits-grid-gap-mobile};
+
+    @include mq(medium){
+        --grid-gap:#{$benefits-grid-gap-desktop};
+    }
+  }
+}

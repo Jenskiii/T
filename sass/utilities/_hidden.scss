@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+.hidden{
+    @include mq(medium){
+        display: none;
+    }
+
+    &[data-type="reverse"]{
+        @include mq(medium, max){
+            display: none;
+        }
+    }
+}

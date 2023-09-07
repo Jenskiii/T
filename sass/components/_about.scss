@@ -1,0 +1,13 @@
+@use "../abstracts/" as * ;
+
+.about{
+    .button{
+        margin-top: 1.2rem;
+
+        @include mq(medium,max){
+        margin-bottom: 3rem;
+                    
+        }
+    }
+    
+}

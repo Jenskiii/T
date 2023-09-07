@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.comparison-chart {
+  overflow-x: auto;
+
+  p,
+  h2 {
+    justify-self: start;
+  }
+
+  .price-tag,
+  svg {
+    justify-self: center;
+    width: 100%;
+  }
+
+  .reverse{
+    flex-direction: row-reverse;
+}
+
+
+// show + hide header 
+  .heading-2 {
+    &[data-type="mobile"] {
+        margin-bottom: 3rem;
+      @include mq(medium) {
+        display: none;
+      }
+    }
+
+    &[data-type="desktop"] {
+        @include mq(medium, max) {
+          visibility: hidden;
+        }
+      }
+  }
+}

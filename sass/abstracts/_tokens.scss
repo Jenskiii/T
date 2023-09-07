@@ -2,20 +2,21 @@
 @use "typography" as *;
 @use "sizes" as *;
 
-$active-theme: $light;
+$active-theme: $default;
 $enable-media-query-dark-mode: false;
 
 // Contextual
 $color-text-default: $color-neutral-700;
-$color-background-default: $color-primary-100;
-$color-text-interactive-default: $color-accent-400;
-$color-text-interactive-hover: $color-accent-500;
+$color-background-default: $color-neutral-000;
+$color-text-interactive-default: $color-brand-primary-400;
+$color-text-interactive-hover: $color-brand-accent-700;
 
 // set to 0 to disable
 $letter-spacing-loose: 0;
 
-$border-radius-1: $size-2;
+$border-radius-1: $size-1;
 $border-radius-2: $size-4;
+$border-radius-3: 3.75rem;
 
 $box-shadow-1: 0px 6px 5px rgb(0, 0, 0, 0.012),
   0px 22px 18px rgb(0, 0, 0, 0.018), 0px 100px 80px rgb(0, 0, 0, 0.03);
@@ -35,7 +36,7 @@ $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
 // body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
-$body-line-height: 1.5;
+$body-line-height: 1.7;
 $body-font-weight: $font-weight-default;
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
@@ -44,11 +45,11 @@ $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
 $heading-font-family: $font-family-accent;
-$heading-color-default: $color-neutral-900;
+$heading-color-default: $color-brand-primary-700;
 $heading-font-weight: $font-weight-bold;
 $heading-letter-spacing: $letter-spacing-loose;
 $heading-line-height: 1.1;
-$heading-text-transform: uppercase;
+$heading-text-transform: none;
 
 $heading-1-font-size: $font-size-900;
 $heading-1-color: $heading-color-default;
@@ -61,89 +62,180 @@ $heading-3-color: $heading-color-default;
 $grid-gap: $size-6;
 $flex-group-gap: $size-4;
 
-$hero-padding-block: clamp(15rem, 15vh, 20rem);
-$section-padding-block: clamp(5rem, 10vh, 6rem);
+// not being used
+//$hero-padding-block: clamp(15rem, 15vh, 20rem);
+$section-padding-block: clamp(3.75rem, 10vh, 5rem);
 
 $container-min-margin-inline: $size-4;
-$container-max-width: 64rem;
-$container-max-width-narrow: 40rem;
-$container-max-width-wide: 75rem;
+$container-max-width: 63rem;
+$container-max-width-narrow: 42rem;
+$container-max-width-wide: 68.75rem;
 
 // site header
-$site-header-background-color: $color-primary-300;
-$site-header-color: $color-neutral-900;
+$site-header-background-color: $color-brand-primary-100;
+$site-header-color: $color-neutral-700;
 $site-header-padding: $size-8 0;
 $site-header-margin: 0;
-$site-header-jusitifcation-small-screens: center;
+$site-header-jusitifcation-small-screens: space-between;
 $site-header-jusitifcation-large-screens: space-between;
 $site-header-alignment: center;
 
 //navigation
 $navigation-color: $site-header-color;
-$navigation-color-hover: $color-primary-300;
+$navigation-color-hover: $color-brand-accent-400;
 $navigation-font-size: $font-size-400;
-$navigation-gap: $size-9;
+$navigation-gap: $size-10;
+$navigation-gap-mobile: $size-8;
 $navigation-link-text-decoration: none;
 $navigation-font-family: $body-font-family;
 $navigation-font-weight: $body-font-weight;
 
 // site footer
-$footer-background-color: $color-primary-300;
-$footer-text-color: $color-primary-900;
-$footer-link-color: $color-neutral-100;
-$footer-link-color-hover: $color-primary-200;
-$footer-link-font-family: $font-family-accent;
+$footer-background-color: $color-neutral-000;
+$footer-text-color: $color-neutral-400;
+$footer-link-color: $color-neutral-700;
+$footer-link-color-hover: $color-brand-accent-400;
+$footer-link-font-family: $font-family-base;
 $footer-link-text-decoration: none;
+
+$footer-border-bottom-color:$color-neutral-100;
+$footer-border-bottom-margin-block: $size-4 $size-6;
 
 // buttons
 $button-font-family: $body-font-family;
 $button-font-size: $font-size-400;
-$button-font-weight: $font-weight-bold;
-$button-text-transform: uppercase;
-$button-padding: 0.75em 2em;
+$button-font-weight: $font-weight-default;
+$button-text-transform: none;
+$button-padding: .75em 1em;
+$button-round-padding: .75em 2em;
 $button-border: 0;
+$button-round-border-radius: $border-radius-3;
 $button-border-radius: $border-radius-1;
 
-$button-accent-color: $color-neutral-100;
-$button-accent-background: $color-accent-400;
-$button-accent-color-hover: $color-neutral-100;
-$button-accent-background-hover: $color-accent-500;
-$button-primary-color: $color-neutral-100;
-$button-primary-background: $color-primary-700;
-$button-primary-color-hover: $color-neutral-100;
-$button-primary-background-hover: $color-primary-800;
+$button-default-background: transparent;
+$button-default-hover-background:$color-neutral-100;
+
+$button-primary-color:  $color-neutral-000;
+$button-primary-background: $color-brand-primary-400;
+$button-primary-color-hover: $color-brand-primary-700;
+$button-primary-background-hover: $color-cyan-300;
+$button-accent-color: $color-brand-primary-700;
+$button-accent-background: $color-brand-accent-400;
+$button-accent-color-hover: $color-brand-primary-700;
+$button-accent-background-hover: $color-brand-accent-200;
 
 // cards
 $card-flow-spacing: $size-2;
-$card-padding: $size-8;
-$card-shadow: $box-shadow-1;
+$card-padding: $size-6;
+$card-shadow: none;
 $card-border-radius: $border-radius-2;
-$card-background-default: $color-primary-100;
+$card-background-default: $color-neutral-100;
 $card-color-default: $body-text-color;
 $card-font-family: $body-font-family;
-$card-line-height: 1.25;
+$card-line-height: $body-line-height;
 $card-heading-color-default: $card-color-default;
-$card-heading-font-size: $font-size-600;
+$card-heading-font-size: $font-size-700;
+
+// checkmarks
+$checkmark-color: $color-brand-accent-400;
+$checkmark-width: 1.4rem;
+$circle-checkmark-color: $color-brand-accent-400;
+$circle-checkmark-stroke: $color-brand-accent-400;
+$circle-checkmark-width: 2.7rem;
+
+// price tag
+$price-tag-font-size: $font-size-800;
+$price-tag-font-weight: $font-weight-bold;
+$price-tag-text-align: center;
+
+// scroll bar
+$scroll-bar-color: $color-brand-accent-200;
+$scroll-bar-color-hover: $color-brand-accent-100;
+$scroll-bar-background-color: $color-brand-primary-700;
+$scroll-bar-border-radius: $border-radius-2;
 
 // forms
-$form-label-color: $body-text-color;
-$form-label-font-family: $body-font-family;
-$form-label-font-weight: $font-weight-bold;
-$form-label-font-size: $body-font-size;
+// not being used
+// $form-label-color: $body-text-color;
+// $form-label-font-family: $body-font-family;
+// $form-label-font-weight: $font-weight-bold;
+// $form-label-font-size: $body-font-size;
 
-$form-input-color: $body-text-color;
-$form-input-font-family: $body-font-family;
-$form-input-font-weight: $font-weight-semi-bold;
-$form-input-font-size: $body-font-size;
-$form-input-background-color: $color-neutral-100;
-$form-input-border-default: 3px solid $color-primary-200;
-$form-input-border-focus: 3px solid $color-primary-400;
-$form-input-padding: $size-3;
-$form-input-border-radius: $border-radius-1;
+// $form-input-color: $body-text-color;
+// $form-input-font-family: $body-font-family;
+// $form-input-font-weight: $font-weight-semi-bold;
+// $form-input-font-size: $body-font-size;
+// $form-input-background-color: $color-neutral-100;
+// $form-input-border-default: 3px solid $color-primary-200;
+// $form-input-border-focus: 3px solid $color-primary-400;
+// $form-input-padding: $size-3;
+// $form-input-border-radius: $border-radius-1;
 
-$form-placeholder-color: $color-primary-300;
-$form-placeholder-font-family: $form-input-font-family;
-$form-placeholder-font-weight: $form-input-font-weight;
-$form-placeholder-font-size: $body-font-size;
+// $form-placeholder-color: $color-primary-300;
+// $form-placeholder-font-family: $form-input-font-family;
+// $form-placeholder-font-weight: $form-input-font-weight;
+// $form-placeholder-font-size: $body-font-size;
 
-$form-group-spacing: 0.5rem;
+// $form-group-spacing: 0.5rem;
+
+
+
+
+// page specific
+
+// about-us
+// hero
+$hero-image-padding-top:3.75rem;
+
+// benefits
+$benefits-image-max-width: 23rem;
+$benefits-grid-gap-mobile:3.5rem;
+$benefits-grid-gap-desktop:5.5rem;
+
+$benefits-paragraph-color: $color-neutral-000;
+$benefits-subheader-font-size:$font-size-750;
+$benefits-subheader-font-family:$font-family-accent;
+$benefits-subheader-font-weight:$font-weight-default;
+
+$benefits-row-jusitifcation:space-between;
+$benefits-row-border-padding-bottom:$size-4;
+$benefits-row-border-bottom: 1px solid $color-neutral-000;
+
+$benefits-subheader-active-font-weight:$font-weight-semi-bold;
+$benefits-icon-svg-fill-active: $color-brand-accent-200;
+$benefits-icon-circle-stroke-active: $color-brand-accent-200;
+$benefits-icon-path-arrow-active: $color-brand-primary-700;
+
+// testimonials
+$testimonials-header-color: $color-neutral-400;
+$testimonials-header-margin-bottom: $size-8;
+
+$testimonials-review-font-size: $font-size-700;
+$testimonials-review-max-width: 40ch;
+
+$testimonials-information-font-size: $font-size-400;
+$testimonials-information-header-font-weight: $font-weight-bold;
+$testimonials-information-p-color: $color-neutral-400;
+
+$testimonials-image-max-width: 15rem;
+
+
+// price plan
+$price-plan-margin-top: 3.3rem;
+$price-plan-background-color: $color-brand-primary-100;
+$price-plan-border-radius: $border-radius-2;
+$price-plan-max-width: 17.9rem;
+$price-plan-height: 40.125rem;
+
+$price-plan-price-margin-block: $size-6 2.6rem;
+
+$price-plan-service-gap: .6rem;
+$price-plan-service-align: flex-start;
+$price-plan-service-flow-space: .6rem;
+
+$price-plan-button-margin-block: $size-7;
+$price-plan-button-align: end;
+
+
+
+// comparison

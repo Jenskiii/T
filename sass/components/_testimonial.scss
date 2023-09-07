@@ -1,0 +1,34 @@
+@use "../abstracts/" as *;
+
+.testimonial {
+  h2 {
+    color: $testimonials-header-color;
+    margin-bottom: $testimonials-header-margin-bottom;
+  }
+
+  &__review {
+    p {
+      max-width: $testimonials-review-max-width;
+      font-size: $testimonials-review-font-size;
+    }
+  }
+
+  &__information {
+    font-size: $testimonials-information-font-size;
+
+    h3 {
+      font-weight: $testimonials-information-header-font-weight;
+    }
+    p {
+      color: $testimonials-information-p-color;
+    }
+  }
+
+  &__image {
+    max-width: $testimonials-image-max-width;
+  }
+
+  @include mq(medium) {
+    grid-template-columns: 60% 40%;
+  }
+}

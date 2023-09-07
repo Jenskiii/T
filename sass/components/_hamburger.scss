@@ -1,0 +1,15 @@
+.hamburger{
+    cursor: pointer;
+    background-image: url(../../assets/hamburger-svg/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    border: 0;
+    width: 2rem;
+    height: 1rem;
+    z-index: 10;
+    transition: background-image 250ms ease-in-out;
+
+    &.active{
+        background-image: url(../../assets/hamburger-svg/icon-close.svg);
+    }
+}

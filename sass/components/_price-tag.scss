@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.price-tag{
+    text-align: $price-tag-text-align;
+    
+    span{
+        font-size: $price-tag-font-size;
+        font-weight: $price-tag-font-weight;
+    }
+}

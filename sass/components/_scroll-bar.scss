@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.scroll-bar{
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        background-color: $scroll-bar-background-color;
+        border-radius: $scroll-bar-border-radius;
+      }
+    
+      &::-webkit-scrollbar-track {
+        border-radius: $scroll-bar-border-radius;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $scroll-bar-color; 
+        border-radius: $scroll-bar-border-radius;
+
+        :is(:hover,:active){
+            color: $scroll-bar-color-hover;
+        }
+      }
+}

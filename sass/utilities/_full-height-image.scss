@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+.full-height-image {
+  // when image is on the right
+  &[data-position="right"] {
+    margin-bottom: calc($section-padding-block * -1);
+  }
+  // when image is on the left
+  &[data-position="left"] {
+    margin-top: calc($section-padding-block * -1);
+  }
+
+  @include mq(medium) {
+    // will make the image stretch the whole height
+    // even when making smaller
+    height: calc(
+      (100% + $section-padding-block * 2) - var(--space-top, 0px) -
+        var(--space-bottom, 0px)
+    );
+
+    // removes margin from top n bottom
+    margin-top: calc($section-padding-block * -1);
+    // if inline --space-bottom = set will move up 
+    // if inline --space-top = right will move down
+    transform: translateY(
+            calc((var(--space-top, 0px) * 0.5) 
+            + (var(--space-bottom, 0px) * -0.5)));
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+}

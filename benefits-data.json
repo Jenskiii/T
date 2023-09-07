@@ -1,0 +1,35 @@
+{
+    "contentCreation": [
+      {
+        "description": "BrandBoosters’ content creation service is designed to help you <span class='fw-bold'>engage with your audience</span> and drive engagement. Our team of creatives produces <span class='fw-bold'>high-quality content</span> that resonates with your target audience and helps you <span class='fw-bold'>stand out from the competition.</span>>"
+      },
+
+      {
+        "description": "By leveraging our content creation services, you can ensure that your brand’s message is communicated effectively and consistently across all channels."
+      }
+    ],
+    "advertising": [
+      {
+        "description": "Don’t forget to pack your hiking boots. <span class='fw-bold'>You’ll need them to tackle Olympus Mons</span>, the <span class='fw-bold'>tallest planetary mountain</span> in our solar system. It’s two and a half times the size of Everest!"
+      },
+      {
+        "description": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. "
+      }
+    ],
+    "socialMedia": [
+      {
+        "description": "<span class='fw-bold'>The smallest of the four Galilean</span> moons orbiting Jupiter, Europa is <span class='fw-bold'>a winter lover’s dream.</span> With an icy surface, it’s perfect for a bit of <span class='fw-bold'>ice skating</span>, curling, hockey, or simple relaxation in your snug wintery cabin."
+      },
+      {
+        "description": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems."
+      }
+    ],
+    "analytics": [
+      {
+        "description": "The only moon known to have a <span class='fw-bold'>dense atmosphere</span> other than Earth, Titan is a home away from home <span class='fw-bold'>(just a few hundred degrees colder!).</span> As a bonus, you get striking views of the Rings of Saturn."
+      },
+      {
+        "description": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S."
+      }
+    ]
+  }

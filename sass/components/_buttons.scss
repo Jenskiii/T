@@ -13,7 +13,13 @@
   padding: $button-padding;
   border: $button-border;
   border-radius: $button-border-radius;
+  background-color: $button-default-background;
   transition: 275ms ease;
+
+  &:hover,
+  &:focus {
+     background-color: $button-default-hover-background;
+  }
 
   &[data-type="accent"] {
     background-color: $button-accent-background;
@@ -32,6 +38,22 @@
     &:is(:hover, :focus) {
       background-color: $button-primary-background-hover;
       color: $button-primary-color-hover;
+    }
+  }
+
+  &[data-type="round"] {
+    background-color: $button-accent-background;
+    color: $button-accent-color;
+
+    font-weight: $font-weight-bold;
+    font-size: $font-size-300;
+    padding: $button-round-padding;
+    border-radius: $button-round-border-radius;
+    min-width: 14rem;
+
+    &:is(:hover, :focus) {
+      background-color: $button-accent-background-hover;
+      color: $button-accent-color-hover;
     }
   }
 }

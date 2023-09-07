@@ -4,15 +4,44 @@
   color: $site-header-color;
   background-color: $site-header-background-color;
   padding: $site-header-padding;
-
+ 
   &__inner {
     display: flex;
+    position: relative;
+    z-index: 5;
     gap: $size-4;
     align-items: $site-header-alignment;
     justify-content: $site-header-jusitifcation-small-screens;
 
     @include mq(medium) {
-      justify-content: $site-header-jusitifcation-large-screens;
+    justify-content: $site-header-jusitifcation-large-screens;
+
+      .mobile-nav {
+        display: none;
+      }
+    }
+
+    @include mq(medium, max) {
+      & {
+        .nav {
+          position: absolute;
+          width: 110%;
+          left: -120%;
+          top: 90px;
+
+          flex-direction: column;
+          --flex-row-gap: #{$navigation-gap-mobile};
+          background-color: $site-header-background-color;
+
+          text-align: center;
+          padding-bottom: 2rem;
+
+          transition: 250ms ease-in-out;
+          &.active{
+            left: -5%;
+          }
+        }
+      }
     }
   }
 }

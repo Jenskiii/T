@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.checkmark {
+    max-width: $checkmark-width;
+    fill: $checkmark-color;
+  }
+
+  .cirle-checkmark{
+    max-width: $circle-checkmark-width;
+    fill: $circle-checkmark-color;
+    stroke: $circle-checkmark-stroke;
+  }
